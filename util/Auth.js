@@ -13,11 +13,13 @@ export async function Authenticate(mode,email,password)
         returnSecureToken: true
     }
     )
+    console.log(response)
     return response.data.idToken
 }
 
 export  function CreateUser(email,password)
 {
+    console.log("hi")
     return Authenticate("signUp",email,password)
 }
 
